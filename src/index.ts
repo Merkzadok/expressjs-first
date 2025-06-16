@@ -1,42 +1,68 @@
-import express from "express";
-
+import express, { Request, Response } from "express";
+import fs from "fs-extra";
+import { User } from "./Types/types";
 const app = express();
 const port = 3000;
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send({
-    name: "merk",
-    address: "London",
-    age: "unknown",
-    id: 7,
+    name: "testName",
+    age: "1",
+    id: 1,
   });
 });
 
-app.post("/user", (req, res) => {
-  const { name, age } = req.body;
-  res.json({ message: `User ${name} is ${age} years old.` });
+app.post("/user", (req: Request, res: Response) => {
+  const { name, age }: { name: string; age: number } = req.body;
+  res.json({ message: `User  ${name} is ${age} years old.` });
 });
 
-app.post("/Firstname", (req, res) => {
-  const { Firstname, Lastname, Address, PhoneNumber } = req.body;
-  res.json({
-    FirstName: `${Firstname}`,
-    Lastname: `${Lastname}`,
-    Address: `${Address}`,
-    PhoneNumber: `${PhoneNumber}`,
-  });
+app.put("/updateUser", (req: Request, res: Response) => {
+  const { name, age }: { name: string; age: number } = req.body;
+  res.send(`updated user ${name} ${age}`);
 });
 
-app.delete("/deleteUser", (req, res) => {
+app.delete("/deleteUser", (req: Request, res: Response) => {
   const { userId } = req.body;
   res.send(`deleted user id ${userId}`);
 });
-app.put("/updateUser", (req, res) => {
-  const { name } = req.body;
-  res.send(`update user ${name}  `);
+
+app.post("/createUser", (req: Request, res: Response) => {
+  const { name, age, userName, userEmail, phoneNumber, password }: User =
+    req.body;
+
+  fs.writeFileSync(
+    "./user.json",
+    JSON.stringify([
+      {
+        name,
+        age,
+        userName,
+        userEmail,
+        phoneNumber,
+        password,
+      },
+    ])
+  );
+
+  res.send("Successfully created User");
+});
+
+app.get("/users", (req: Request, res: Response) => {
+  const users = fs.readFileSync("./user.json", { encoding: "utf8", flag: "r" });
+  res.json(JSON.parse(users));
 });
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });
+
+// authentication
+
+// user create -> name, age, userName(unique), userEmail, phoneNumber, password
+// user login -> userName, password
+// user delete -> userName eer ustgana
+// user update -> userName eer ni update
+
+// fs-extra gdeg dependency ashiglana.
