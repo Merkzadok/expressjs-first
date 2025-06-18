@@ -1,13 +1,5 @@
 [
   {
-    "name": "Thomas",
-    "age": "Edison",
-    "userName": "Berlin, Germany ",
-    "userEmail": "1800864157",
-    "phoneNumber": "1234567",
-    "password": "sercretetreter"
-  },
-  {
     "name": "Frederick",
     "age": "Taylor",
     "userName": "Paris, France",
@@ -16,57 +8,39 @@
     "password": "TheMostSecretPassowrd"
   },
   {
-    "name": "Frederick",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.7631504227280117
+    "name": "Thomas",
+    "age": "20",
+    "userName": "Thomas",
+    "userEmail": "Thomas1234@gmail.com",
+    "phoneNumber": "1-800-123",
+    "password": "PPAASSWWOORRDD",
+    "userId": 0.09338182408252127
   },
   {
-    "name": "Thomas",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.8953962514170415
+    "name": "George",
+    "age": "30",
+    "userName": "Georgienoar2",
+    "userEmail": "PG1234@gmail.com",
+    "phoneNumber": "1-800-700-200",
+    "password": "verysercetpassword",
+    "userId": 0.9312809955963908
   },
   {
-    "name": "Thomas",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.8674376259432874
+    "name": "Edward",
+    "age": "40",
+    "userName": "Edicoson",
+    "userEmail": "Eddie@gmail.com",
+    "phoneNumber": "185-535-344-1",
+    "password": "P P P P P P P P P ",
+    "userId": 0.017611979066674444
   },
   {
-    "name": "Thomas",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.832255674414845
-  },
-  {
-    "name": "Thomas",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.5803653976188679
-  },
-  {
-    "name": "Thomas",
-    "age": "Tayolor",
-    "userName": "Paris, France",
-    "userEmail": "Frederick@gmail.com",
-    "phoneNumber": "1-800-104004",
-    "password": "TheMostSecretPassowrd",
-    "userId": 0.6873847164173954
+    "name": "Edward",
+    "age": "40",
+    "userName": "Edicoson",
+    "userEmail": "Eddie@gmail.com",
+    "phoneNumber": "185-535-344-1",
+    "password": "P P P P P P P P P ",
+    "userId": 0.8307102016465293
   }
 ]

@@ -30,10 +30,8 @@ userRouter.get("/users", (req: Request, res: Response) => {
 userRouter.post("/createUser", (req: Request, res: Response) => {
   const { name, age, userName, userEmail, phoneNumber, password }: User =
     req.body;
-
   const filePath = "./user.json";
   const uniqueId = Math.random();
-
   let users: User[] = [];
 
   if (fs.existsSync(filePath)) {
@@ -59,7 +57,9 @@ userRouter.post("/createUser", (req: Request, res: Response) => {
 });
 userRouter.delete("/deleteUser", (req: Request, res: Response) => {
   const { userId } = req.body;
-  const existingData = fs.readFileSync("./user.json", "utf8");
+  const filePath = "./user.json";
+
+  const existingData = fs.readFileSync(filePath, "utf8");
 
   const deletedUser = JSON.parse(existingData).filter(
     (user: User) => user.userId !== userId
@@ -67,7 +67,7 @@ userRouter.delete("/deleteUser", (req: Request, res: Response) => {
 
   fs.writeFileSync("./user.json", JSON.stringify(deletedUser, null, 2));
 
-  res.json({ userId });
+  res.json({ message: `This ${userId} user succesfully deleted` });
 });
 
 export default userRouter;

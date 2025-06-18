@@ -7,3 +7,8 @@ export type User = {
   password: string;
   userId: number;
 };
+export type TodosType = {
+  desc: string;
+  id: number;
+  isComplete: boolean;
+};
